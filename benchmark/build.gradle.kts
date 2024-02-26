@@ -3,7 +3,6 @@ import com.android.build.api.dsl.ManagedVirtualDevice
 plugins {
     id("com.android.test")
     id("org.jetbrains.kotlin.android")
-//    id("androidx.benchmark")
 }
 
 android {
@@ -38,29 +37,6 @@ android {
         }
     }
 
-//            localDevices {
-//                register("samsung_SM_G780FApi33") {
-//                    device = "samsung SM-G780F"
-//                    apiLevel = 33
-//                    // To include Google services, use "google".
-//                    systemImageSource = "aosp"
-//                }
-//            }
-//            devices{
-//                samsung_SM_G780FApi33(ManagedVirtualDevice)
-//
-//            }
-//            devices {
-//                register("samsung_SM_G780FApi33") {
-//                    device = "samsung SM-G780F"
-//                    apiLevel = 33
-//                    // To include Google services, use "google".
-//                    systemImageSource = "google"
-//                }
-//            }
-//        }
-//    }
-
     buildTypes {
         // This benchmark buildType is used for benchmarking, and should function like your
         // release build (for example, with minification on). It"s signed with a debug key
@@ -82,7 +58,7 @@ dependencies {
     implementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("androidx.test.uiautomator:uiautomator:2.3.0")
     implementation("androidx.benchmark:benchmark-macro-junit4:1.2.3")
-    implementation("androidx.profileinstaller:profileinstaller:1.3.1")
+    implementation("androidx.profileinstaller:profileinstaller:1.3.0-alpha01")
 }
 
 androidComponents {

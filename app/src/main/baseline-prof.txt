@@ -922,10 +922,8 @@ Landroidx/test/uiautomator/InteractionController$WaitForAnyEventPredicate;
 Landroidx/test/uiautomator/QueryController;
 HSPLandroidx/test/uiautomator/QueryController;-><clinit>()V
 HSPLandroidx/test/uiautomator/QueryController;-><init>(Landroidx/test/uiautomator/UiDevice;)V
-HSPLandroidx/test/uiautomator/QueryController;->lambda$new$0$androidx-test-uiautomator-QueryController(Landroid/view/accessibility/AccessibilityEvent;)V
 Landroidx/test/uiautomator/QueryController$$ExternalSyntheticLambda0;
 HSPLandroidx/test/uiautomator/QueryController$$ExternalSyntheticLambda0;-><init>(Landroidx/test/uiautomator/QueryController;)V
-HSPLandroidx/test/uiautomator/QueryController$$ExternalSyntheticLambda0;->onAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 Landroidx/test/uiautomator/SearchCondition;
 Landroidx/test/uiautomator/Searchable;
 Landroidx/test/uiautomator/UiDevice;
@@ -1291,9 +1289,8 @@ HSPLkotlin/collections/EmptyList;-><clinit>()V
 HSPLkotlin/collections/EmptyList;-><init>()V
 HSPLkotlin/collections/EmptyList;->isEmpty()Z
 Lkotlin/collections/EmptyMap;
-Lkotlin/collections/EmptySet;
-HSPLkotlin/collections/EmptySet;-><clinit>()V
-HSPLkotlin/collections/EmptySet;-><init>()V
+PLkotlin/collections/EmptySet;-><clinit>()V
+PLkotlin/collections/EmptySet;-><init>()V
 PLkotlin/collections/EmptySet;->equals(Ljava/lang/Object;)Z
 Lkotlin/collections/Grouping;
 Lkotlin/collections/IndexingIterable;
@@ -1322,8 +1319,9 @@ Lkotlin/collections/ReversedList;
 Lkotlin/collections/ReversedListReadOnly;
 Lkotlin/collections/SetsKt;
 Lkotlin/collections/SetsKt__SetsJVMKt;
+HSPLkotlin/collections/SetsKt__SetsJVMKt;->setOf(Ljava/lang/Object;)Ljava/util/Set;
 Lkotlin/collections/SetsKt__SetsKt;
-HSPLkotlin/collections/SetsKt__SetsKt;->emptySet()Ljava/util/Set;
+PLkotlin/collections/SetsKt__SetsKt;->emptySet()Ljava/util/Set;
 Lkotlin/collections/SetsKt___SetsKt;
 Lkotlin/collections/SlidingWindowKt;
 Lkotlin/collections/builders/ListBuilder;

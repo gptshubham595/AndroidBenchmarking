@@ -1,5 +1,6 @@
 package com.example.benchmark
 
+import androidx.benchmark.macro.BaselineProfileMode
 import androidx.benchmark.macro.CompilationMode
 import androidx.benchmark.macro.FrameTimingMetric
 import androidx.benchmark.macro.MacrobenchmarkScope
@@ -47,7 +48,11 @@ class ExampleStartupBenchmark {
 
     @Test
     fun startUpCompilationModePartial() {
-        startup(CompilationMode.Partial())
+        startup(
+            CompilationMode.Partial(
+                baselineProfileMode = BaselineProfileMode.Require,
+            ),
+        )
     }
 
     fun startup(mode: CompilationMode) = benchmarkRule.measureRepeated(
