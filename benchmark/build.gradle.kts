@@ -58,7 +58,7 @@ dependencies {
     implementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("androidx.test.uiautomator:uiautomator:2.3.0")
     implementation("androidx.benchmark:benchmark-macro-junit4:1.2.3")
-    implementation("androidx.profileinstaller:profileinstaller:1.3.0-alpha01")
+    implementation("androidx.profileinstaller:profileinstaller:1.4.0-alpha01")
 }
 
 androidComponents {
