@@ -22,14 +22,15 @@ class BaselineProfileGenerator {
     @Test
     fun generateBaselineProfile() = baselineRule.collect(
         packageName = "com.example.sample",
+        includeInStartupProfile = true,
         profileBlock = {
             // Run your app here, and perform the actions you want
             // to capture in the baseline profile
             startActivityAndWait() // library itself captures the startup time
-            device.wait(Until.hasObject(By.res("com.example.sample","imageView")), 7000)
+            device.wait(Until.hasObject(By.res("com.example.sample", "imageView")), 7000)
 
             // now lets scroll app
-            val feed = device.findObject(By.res("com.example.sample","imageView"))
+            val feed = device.findObject(By.res("com.example.sample", "imageView"))
             feed.fling(Direction.DOWN)
         },
     )
