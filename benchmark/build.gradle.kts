@@ -25,15 +25,11 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    testOptions {
-        devices {
-            add(
-                create<ManagedVirtualDevice>("pixel2api34") {
-                    device = "Pixel 2"
-                    apiLevel = 34
-                    systemImageSource = "aosp-atd"
-                },
-            )
+    testOptions.managedDevices.devices {
+        create<ManagedVirtualDevice>("pixel2api34") {
+            device = "Pixel 2"
+            apiLevel = 34
+            systemImageSource = "aosp-atd"
         }
     }
 

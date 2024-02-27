@@ -4,6 +4,9 @@
     <application>
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity2"
             android:exported="true"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.Benchmarking">
@@ -14,6 +17,5 @@
             </intent-filter>
         </activity>
     </application>
-
 
 </manifest>

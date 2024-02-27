@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.benchmarking"
+    namespace = "com.example.sample"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.benchmarking"
+        applicationId = "com.example.sample"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -22,6 +22,7 @@ android {
 
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("debug")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -33,6 +34,7 @@ android {
             signingConfig = signingConfigs.getByName("debug")
             matchingFallbacks += listOf("release")
             isDebuggable = false
+            proguardFiles("benchmark-rules.pro")
         }
     }
     compileOptions {

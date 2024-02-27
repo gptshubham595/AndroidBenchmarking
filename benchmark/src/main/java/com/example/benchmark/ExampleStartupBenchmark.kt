@@ -30,24 +30,24 @@ class ExampleStartupBenchmark {
     @get:Rule
     val benchmarkRule = MacrobenchmarkRule()
 
-//    @Test
-//    fun startup() = benchmarkRule.measureRepeated(
-//        packageName = "com.example.benchmarking",
-//        metrics = listOf(StartupTimingMetric(), FrameTimingMetric()),
-//        iterations = 5,
-//        startupMode = StartupMode.COLD,
-//    ) {
-//        pressHome()
-//        startActivityAndWait()
-//    }
+    @Test
+    fun startup() = benchmarkRule.measureRepeated(
+        packageName = "com.example.sample",
+        metrics = listOf(StartupTimingMetric(), FrameTimingMetric()),
+        iterations = 5,
+        startupMode = StartupMode.COLD,
+    ) {
+        pressHome()
+        startActivityAndWait()
+    }
 
     @Test
-    fun startUpCompilationMode() {
+    fun startUpCompilationModeWithoutBaseline() {
         startup(CompilationMode.None())
     }
 
     @Test
-    fun startUpCompilationModePartial() {
+    fun startUpCompilationModeWithBaseline() {
         startup(
             CompilationMode.Partial(
                 baselineProfileMode = BaselineProfileMode.Require,
@@ -56,7 +56,7 @@ class ExampleStartupBenchmark {
     }
 
     fun startup(mode: CompilationMode) = benchmarkRule.measureRepeated(
-        packageName = "com.example.benchmarking",
+        packageName = "com.example.sample",
         metrics = listOf(StartupTimingMetric(), FrameTimingMetric()),
         iterations = 5,
         startupMode = StartupMode.COLD,
